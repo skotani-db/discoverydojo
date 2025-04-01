@@ -1,0 +1,121 @@
+.stButton>button {
+    width: 100%;
+    min-width: 100px;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 45px;
+    padding: 8px 6px;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    transition: all 0.2s ease;
+}
+
+/* ボタンスタイルの事前定義 - すべての状態を最初に定義してレイアウトの安定性を確保 */
+/* アクティブ(選択中)ボタン */
+.button-active {
+    background-color: #ff5722 !important;
+    color: white !important;
+    border-color: #ff5722 !important;
+}
+
+/* ハイライト(ペルソナ関連)ボタン */
+.button-highlight {
+    background-color: #ffe8d6 !important;
+    border-color: #ff5722 !important;
+}
+
+/* 完了(データ入力済み)ボタン */
+.button-completed {
+    background-color: #e8f5e9 !important;
+    border-color: #4CAF50 !important;
+}
+
+.sidebar .sidebar-content {
+    background-color: #f5f5f5;
+}
+h1, h2, h3 {
+    color: #ff3621;
+}
+.step-container {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+.highlight {
+    background-color: #ffe8d6 !important;
+    border: 2px solid #ff5722 !important;
+}
+.data-stack-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.data-stack-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.stack-category {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.cloud-tabs {
+    margin-bottom: 20px;
+}
+.tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+/* 縦方向の中央揃えのために追加 */
+div.category-label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-right: 10px;
+}
+
+/* ボタン行のコンテナに固定高さを設定 */
+.button-row {
+    min-height: 50px;
+    margin-bottom: 5px;
+}
+
+/* 履歴一覧表示用のスタイル */
+.history-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #ff3621;
+}
+
+.history-title {
+  font-weight: bold;
+  color: #ff3621;
+  margin-bottom: 8px;
+}
+
+.history-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.history-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

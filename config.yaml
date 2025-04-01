@@ -1,0 +1,592 @@
+# 定数設定
+
+# Delta Table 設定
+DELTA_TABLE:
+  DEFAULT_CATALOG: "main"
+  DEFAULT_SCHEMA: "default"
+  TABLE_NAME: "migration_tool_history"
+
+# ペルソナ選択肢
+PERSONA_OPTIONS:
+  - "データエンジニア"
+  - "データサイエンティスト"
+  - "データアナリスト" 
+  - "IT管理者"
+  - "ビジネスアナリスト"
+
+# 関心領域選択肢
+INTEREST_OPTIONS:
+  - "データガバナンス"
+  - "生成AI"
+  - "データ基盤のコスト削減"
+  - "データ基盤の処理速度改善"
+  - "既存データ基盤のモダナイズ"
+  - "新規データ基盤構築"
+  - "社内データを活用したプロジェクト実施"
+
+# アクション選択肢
+NEXT_ACTION_OPTIONS:
+  - "詳細製品説明"
+  - "製品デモ"
+  - "事例紹介"
+  - "別部署へのアプローチ"
+  - "再訪"
+  - "製品比較情報提供"
+  - "撤退"
+
+# クラウド選択肢
+CLOUD_OPTIONS:
+  - "AWS"
+  - "Azure"
+  - "GCP"
+  - "オンプレミス"
+
+# データスタックのカテゴリとコンポーネント
+DATA_STACK:
+  データエンジニアリング:
+    - "ジョブ管理"
+    - "データ取り込み" 
+    - "データ変換"
+  プラットフォーム管理:
+    - "データカタログ"
+    - "ストレージ"
+  データサイエンス:
+    - "生成AI"
+    - "AIプラットフォーム"
+  ビジネスアナリスト:
+    - "BIツール"
+    - "データウェアハウス"
+  ビジネスパートナー:
+    - "アプリ"
+    - "データ共有"
+
+# ペルソナとスタックのマッピング
+PERSONA_STACK_MAPPING:
+  データエンジニア: 
+    - "ジョブ管理"
+    - "データ取り込み"
+    - "データ変換"
+    - "データカタログ"
+    - "ストレージ"
+  データサイエンティスト:
+    - "生成AI"
+    - "AIプラットフォーム"
+    - "データカタログ"
+  データアナリスト:
+    - "BIツール"
+    - "データウェアハウス"
+    - "データカタログ"
+  IT管理者:
+    - "ジョブ管理"
+    - "ストレージ"
+    - "データカタログ"
+  ビジネスアナリスト:
+    - "BIツール"
+    - "データウェアハウス"
+    - "アプリ"
+
+# 各コンポーネントの共通課題
+COMMON_ISSUES:
+  ジョブ管理:
+    - "スケジューリングが複雑"
+    - "ジョブの依存関係管理が難しい"
+    - "障害時の復旧が困難"
+  データ取り込み:
+    - "取り込み速度が遅い"
+    - "様々なソースからの取り込みが複雑"
+    - "リアルタイム処理ができない"
+  データ変換:
+    - "夜間バッチが終わらない"
+    - "変換ロジックの管理が複雑"
+    - "スケーラビリティに問題がある"
+  データカタログ:
+    - "メタデータ管理が不十分"
+    - "データの発見が難しい"
+    - "データ系図の追跡が困難"
+  ストレージ:
+    - "コストが高い"
+    - "スケーリングが難しい"
+    - "パフォーマンスが低い"
+  生成AI:
+    - "モデルの開発環境が整っていない"
+    - "推論が遅い"
+    - "GPUリソースが不足"
+  AIプラットフォーム:
+    - "モデル管理が困難"
+    - "MLOpsの自動化が不十分"
+    - "本番環境への移行が難しい"
+  BIツール:
+    - "クエリ実行が遅い"
+    - "大規模データの表示が遅い"
+    - "セルフサービス分析が難しい"
+  データウェアハウス:
+    - "コストが高い"
+    - "クエリ速度が遅い"
+    - "スケーラビリティに問題がある"
+  アプリ:
+    - "データとの連携が難しい"
+    - "開発のリードタイムが長い"
+    - "パフォーマンスが低い"
+  データ共有:
+    - "セキュリティ管理が複雑"
+    - "外部連携が困難"
+    - "リアルタイム共有ができない"
+
+# クラウド別の製品リスト
+PRODUCTS_BY_CLOUD:
+  AWS:
+    ジョブ管理:
+      - "AWS Step Functions"
+      - "AWS Glue Workflows"
+      - "Apache Airflow on EKS"
+      - "Control-M"
+      - "Autosys"
+      - "Redhat Ansible"
+      - "Rundeck"
+    データ取り込み:
+      - "AWS Glue"
+      - "AWS DMS"
+      - "Amazon Kinesis"
+      - "HULFT"
+      - "Attunity"
+      - "Fivetran"
+      - "Stitch"
+      - "Matillion"
+    データ変換:
+      - "AWS Glue ETL"
+      - "AWS Lambda"
+      - "Amazon EMR"
+      - "Informatica PowerCenter"
+      - "Talend"
+      - "Ab Initio"
+      - "SSIS"
+    データカタログ:
+      - "AWS Glue Data Catalog"
+      - "AWS Lake Formation"
+      - "Collibra"
+      - "Alation"
+      - "Informatica Enterprise Data Catalog"
+      - "Atlan"
+    ストレージ:
+      - "Amazon S3"
+      - "Amazon EFS"
+      - "Amazon FSx"
+      - "NetApp Cloud Volumes"
+      - "Dell EMC ECS"
+      - "Hitachi Content Platform"
+    生成AI:
+      - "Amazon Bedrock"
+      - "Amazon SageMaker JumpStart"
+      - "Hugging Face"
+      - "OpenAI"
+      - "Anthropic Claude"
+      - "Cohere"
+    AIプラットフォーム:
+      - "Amazon SageMaker"
+      - "AWS Deep Learning AMIs"
+      - "Dataiku"
+      - "RapidMiner"
+      - "H2O.ai"
+      - "DataRobot"
+      - "Domino Data Lab"
+    BIツール:
+      - "Amazon QuickSight"
+      - "Tableau on AWS"
+      - "Power BI"
+      - "Qlik"
+      - "MicroStrategy"
+      - "SAP BusinessObjects"
+      - "ThoughtSpot"
+    データウェアハウス:
+      - "Amazon Redshift"
+      - "Amazon Athena"
+      - "Snowflake"
+      - "Teradata"
+      - "Oracle Exadata"
+      - "IBM Db2"
+      - "SAP HANA"
+    アプリ:
+      - "AWS Amplify"
+      - "Amazon Elastic Beanstalk"
+      - "SAP on AWS"
+      - "Oracle EBS"
+      - "Salesforce"
+      - "Microsoft Dynamics 365"
+    データ共有:
+      - "AWS Data Exchange"
+      - "Amazon AppFlow"
+      - "MuleSoft"
+      - "Boomi"
+      - "Jitterbit"
+      - "SnapLogic"
+      - "Striim"
+      
+  Azure:
+    ジョブ管理:
+      - "Azure Data Factory"
+      - "Azure Logic Apps"
+      - "Apache Airflow on AKS"
+      - "Control-M"
+      - "Tidal Enterprise Scheduler"
+      - "Redhat Ansible"
+      - "Autosys"
+    データ取り込み:
+      - "Azure Data Factory"
+      - "Azure Event Hubs"
+      - "Azure Stream Analytics"
+      - "HULFT"
+      - "Attunity"
+      - "Fivetran"
+      - "Stitch"
+      - "Talend"
+    データ変換:
+      - "Azure Databricks"
+      - "Azure Synapse Analytics"
+      - "Azure HDInsight"
+      - "Informatica PowerCenter"
+      - "Talend"
+      - "Ab Initio"
+      - "Pentaho"
+    データカタログ:
+      - "Azure Purview"
+      - "Azure Synapse Data Catalog"
+      - "Collibra"
+      - "Alation"
+      - "Informatica Enterprise Data Catalog"
+      - "Alex Solutions"
+    ストレージ:
+      - "Azure Blob Storage"
+      - "Azure Data Lake Storage"
+      - "Azure Files"
+      - "NetApp Azure Files"
+      - "Dell EMC CloudIQ"
+      - "Pure Storage"
+    生成AI:
+      - "Azure OpenAI Service"
+      - "Azure Cognitive Services"
+      - "Hugging Face"
+      - "Anthropic Claude"
+      - "Cohere"
+      - "H2O.ai"
+    AIプラットフォーム:
+      - "Azure Machine Learning"
+      - "Azure Databricks"
+      - "Dataiku"
+      - "RapidMiner"
+      - "H2O.ai"
+      - "DataRobot"
+      - "Domino Data Lab"
+    BIツール:
+      - "Power BI"
+      - "Azure Synapse Analytics"
+      - "Tableau"
+      - "Qlik"
+      - "MicroStrategy"
+      - "SAP BusinessObjects"
+      - "ThoughtSpot"
+    データウェアハウス:
+      - "Azure Synapse Analytics"
+      - "Azure SQL Data Warehouse"
+      - "Snowflake"
+      - "Teradata"
+      - "Oracle Exadata"
+      - "IBM Db2"
+      - "SAP HANA"
+    アプリ:
+      - "Azure App Service"
+      - "Azure Functions"
+      - "SAP on Azure"
+      - "Oracle EBS"
+      - "Salesforce"
+      - "Microsoft Dynamics 365"
+      - "ServiceNow"
+    データ共有:
+      - "Azure Data Share"
+      - "Power BI Dataflows"
+      - "MuleSoft"
+      - "Boomi"
+      - "Jitterbit"
+      - "SnapLogic"
+      - "Striim"
+      
+  GCP:
+    ジョブ管理:
+      - "Cloud Composer"
+      - "Cloud Scheduler"
+      - "Workflows"
+      - "Control-M"
+      - "Autosys"
+      - "Redhat Ansible"
+      - "Rundeck"
+      - "Jenkins"
+    データ取り込み:
+      - "Dataflow"
+      - "Pub/Sub"
+      - "Cloud Data Fusion"
+      - "HULFT"
+      - "Attunity"
+      - "Fivetran"
+      - "Stitch"
+      - "Matillion"
+      - "Talend"
+    データ変換:
+      - "Dataproc"
+      - "Dataflow"
+      - "BigQuery"
+      - "Informatica PowerCenter"
+      - "Talend"
+      - "Ab Initio"
+      - "Pentaho"
+      - "SSIS"
+    データカタログ:
+      - "Data Catalog"
+      - "Dataplex"
+      - "Collibra"
+      - "Alation"
+      - "Informatica Enterprise Data Catalog"
+      - "Alex Solutions"
+      - "Atlan"
+    ストレージ:
+      - "Cloud Storage"
+      - "Filestore"
+      - "Persistent Disk"
+      - "NetApp Cloud Volumes"
+      - "Dell EMC ECS"
+      - "Hitachi Content Platform"
+    生成AI:
+      - "Vertex AI"
+      - "Cloud Natural Language API"
+      - "Hugging Face"
+      - "OpenAI"
+      - "Anthropic Claude"
+      - "Cohere"
+      - "H2O.ai"
+    AIプラットフォーム:
+      - "Vertex AI"
+      - "AI Platform"
+      - "Dataiku"
+      - "RapidMiner"
+      - "H2O.ai"
+      - "DataRobot"
+      - "Domino Data Lab"
+    BIツール:
+      - "Looker"
+      - "Data Studio"
+      - "Tableau"
+      - "Power BI"
+      - "Qlik"
+      - "MicroStrategy"
+      - "SAP BusinessObjects"
+    データウェアハウス:
+      - "BigQuery"
+      - "Spanner"
+      - "Snowflake"
+      - "Teradata"
+      - "Oracle Exadata"
+      - "IBM Db2"
+      - "SAP HANA"
+      - "MySQL"
+    アプリ:
+      - "App Engine"
+      - "Cloud Run"
+      - "SAP on GCP"
+      - "Oracle EBS"
+      - "Salesforce"
+      - "Microsoft Dynamics 365"
+      - "ServiceNow"
+    データ共有:
+      - "Analytics Hub"
+      - "BigQuery Data Transfer Service"
+      - "MuleSoft"
+      - "Boomi"
+      - "Jitterbit"
+      - "SnapLogic"
+      - "Striim"
+      
+  オンプレミス:
+    ジョブ管理:
+      - "Apache Airflow"
+      - "Control-M"
+      - "Jenkins"
+      - "Autosys"
+      - "Tidal Enterprise Scheduler"
+      - "Redhat Ansible"
+      - "Rundeck"
+      - "CA Workload Automation"
+    データ取り込み:
+      - "Apache NiFi"
+      - "Informatica"
+      - "Talend"
+      - "HULFT"
+      - "Attunity"
+      - "DataStage"
+      - "Oracle GoldenGate"
+      - "Precisely Connect"
+      - "StreamSets"
+    データ変換:
+      - "Apache Spark"
+      - "Informatica PowerCenter"
+      - "Talend"
+      - "Ab Initio"
+      - "SSIS"
+      - "Oracle Data Integrator"
+      - "IBM DataStage"
+      - "Pentaho"
+      - "SAS Data Integration"
+    データカタログ:
+      - "Alation"
+      - "Collibra"
+      - "Apache Atlas"
+      - "Informatica Enterprise Data Catalog"
+      - "Alex Solutions"
+      - "Atlan"
+      - "data.world"
+      - "Waterline Data"
+    ストレージ:
+      - "HDFS"
+      - "NAS"
+      - "SAN"
+      - "NetApp"
+      - "Dell EMC"
+      - "Hitachi Vantara"
+      - "IBM Storage"
+      - "Pure Storage"
+      - "HPE Primera"
+      - "Fujitsu ETERNUS"
+    生成AI:
+      - "自社構築LLM"
+      - "オープンソースLLM"
+      - "Hugging Face"
+      - "H2O.ai"
+      - "IBM Watson"
+      - "SAS Viya"
+    AIプラットフォーム:
+      - "自社構築ML基盤"
+      - "Kubeflow"
+      - "Dataiku"
+      - "RapidMiner"
+      - "H2O.ai"
+      - "DataRobot"
+      - "Domino Data Lab"
+      - "KNIME"
+      - "SAS Enterprise Miner"
+    BIツール:
+      - "Tableau Server"
+      - "MicroStrategy"
+      - "Power BI Report Server"
+      - "Qlik Sense Server"
+      - "SAP BusinessObjects"
+      - "Oracle OBIEE"
+      - "IBM Cognos"
+      - "SAS Visual Analytics"
+    データウェアハウス:
+      - "Oracle"
+      - "Teradata"
+      - "Microsoft SQL Server"
+      - "IBM Db2"
+      - "SAP HANA"
+      - "Snowflake"
+      - "Vertica"
+      - "Greenplum"
+      - "Exasol"
+      - "PostgreSQL"
+    アプリ:
+      - "自社開発アプリ"
+      - "Tomcat"
+      - "JBoss"
+      - "WebLogic"
+      - "WebSphere"
+      - "IIS"
+      - "SAP"
+      - "Oracle EBS"
+      - "Microsoft Dynamics"
+      - "Infor"
+      - "PeopleSoft"
+    データ共有:
+      - "FTP"
+      - "API Gateway"
+      - "ESB"
+      - "MuleSoft"
+      - "IBM Integratccbcheilnerffhrtvfebdhjhefceiugjidnikhjht
+      ion Bus"
+      - "Oracle SOA Suite"
+      - "TIBCO"
+      - "Boomi"
+      - "Jitterbit"
+      - "SnapLogic"
+      - "Informatica B2B"
+
+# Databricks貢献ポイント
+DATABRICKS_CONTRIBUTIONS:
+  ジョブ管理: |
+    - **Databricks Workflows**: 依存関係のあるジョブを視覚的に構築・管理でき、障害からの回復も容易
+    - **Notebook Jobs**: インタラクティブな開発からシームレスに本番ジョブへの移行が可能
+    - **REST API**: ジョブのプログラマティックな管理とモニタリングが可能
+  データ取り込み: |
+    - **Auto Loader**: ストリーミングファイル取り込みで、効率的かつ信頼性の高いデータ取り込みを実現
+    - **Delta Live Tables**: 宣言的なパイプライン構築で、データ品質チェックを含む堅牢なデータ取り込みが可能
+    - **多様なコネクタ**: 各種データソースからのシームレスな取り込みをサポート
+  データ変換: |
+    - **Photon Engine**: SQLクエリやSparkジョブを高速化し、処理パフォーマンスを大幅に向上
+    - **Delta Lakehouse**: 変換処理をストレージと近接させることでパフォーマンスを向上
+    - **スケーラブルなクラスタ**: 需要に応じたリソース調整で夜間バッチの高速化が可能
+  データカタログ: |
+    - **Unity Catalog**: テーブル、ビュー、MLモデルなどのメタデータを統合管理
+    - **データ系図**: データの出所と変換プロセスを自動的に追跡
+    - **検索機能**: 組織全体のデータ資産を簡単に検索可能
+  ストレージ: |
+    - **Delta Lake**: 高性能なストレージレイヤーでACIDトランザクションをサポート
+    - **コスト最適化**: オートスケールとデータ階層化による費用対効果の高いストレージ
+    - **パフォーマンス**: データインデックスやZオーダーによる高速なクエリパフォーマンス
+  生成AI: |
+    - **Mosaic AI**: 大規模言語モデルの開発・デプロイ・管理を簡素化
+    - **MLflow統合**: モデルのバージョン管理と追跡を容易に実現
+    - **最適化された推論**: GPUクラスタを活用した高速な推論処理
+  AIプラットフォーム: |
+    - **MLflowによるモデル管理**: 実験追跡、モデル登録、デプロイを一元化
+    - **ノートブック環境**: コラボレーティブな開発と実験を促進
+    - **モデルサービング**: REST APIを通じた簡単なモデルデプロイ
+  BIツール: |
+    - **Databricks SQL**: 高速なクエリエンジンで大規模データの分析を高速化
+    - **ダッシュボード**: インタラクティブなビジュアライゼーションを簡単に作成
+    - **Power BIやTableau連携**: 既存BIツールとのシームレスな連携
+  データウェアハウス: |
+    - **Databricks SQL**: ウェアハウスレベルのパフォーマンスと拡張性
+    - **コスト効率**: スケーラブルなアーキテクチャによる高い費用対効果
+    - **SQLエンドポイント**: 需要に応じた自動スケーリングでパフォーマンスを確保
+  アプリ: |
+    - **APIサポート**: アプリケーションとの容易な連携
+    - **リアルタイムデータアクセス**: ダッシュボードやアプリケーションへのデータ提供
+    - **セキュリティ統合**: 既存の認証インフラとの連携
+  データ共有: |
+    - **Delta Sharing**: オープンプロトコルによるセキュアなデータ共有
+    - **きめ細かなアクセス制御**: 堅牢なセキュリティと統制を維持しながらのデータ共有
+    - **Unity Catalog**: 共有データに対する統一的なガバナンス
+
+# 深堀り質問テンプレート
+DEEPDIVE_QUESTIONS:
+  ジョブ管理: "現在のジョブ管理システムでは、どのくらいの頻度でジョブが失敗し、復旧にどのくらいの時間を要していますか？また、ジョブの依存関係はどのように管理されていますか？"
+  データ取り込み: "現在どのような種類のデータソースから取り込みを行っていますか？また、一日あたりどのくらいのデータ量を取り込んでいますか？"
+  データ変換: "夜間バッチ処理の完了時間はどのくらいですか？また、月末などの大量データ処理時にパフォーマンスはどのように変化しますか？"
+  データカタログ: "データカタログの不足により、新しいデータセットの検索や理解にどのくらいの時間がかかっていますか？また、データリネージの追跡はどのように行っていますか？"
+  ストレージ: "現在のストレージシステムでは、どのようなタイプのデータを保存していますか？また、データ容量の増加に伴いどのような課題が発生していますか？"
+  生成AI: "現在の生成AIの利用において、どのようなモデルを使用していますか？また、推論時のレイテンシや精度についてどのような課題がありますか？"
+  AIプラットフォーム: "モデルの開発から本番環境へのデプロイまでにどのくらいの時間がかかっていますか？MLOpsのプロセスはどの程度自動化されていますか？"
+  BIツール: "現在のBIツールでは、大規模データセットに対するクエリ実行にどのくらいの時間がかかっていますか？また、エンドユーザーからどのような改善要望がありますか？"
+  データウェアハウス: "現在のデータウェアハウスのクエリパフォーマンスはどうですか？特に、複雑な分析クエリや大量のデータに対してどのような課題がありますか？"
+  アプリ: "現在のアプリケーションとデータ基盤との連携において、どのような課題がありますか？データの鮮度やリアルタイム性について要件はありますか？"
+  データ共有: "社内外でのデータ共有において、セキュリティやガバナンスに関してどのような課題がありますか？またデータ共有のリクエストの頻度はどのくらいですか？"
+
+# 課題特有の追加質問
+ISSUE_SPECIFIC_QUESTIONS:
+  コストが高い: "現在の月間コストはどのくらいですか？またどの部分のコストが特に高いと感じていますか？"
+  パフォーマンスが低い: "具体的にどのような処理が遅いと感じていますか？また、処理時間の目標値はありますか？"
+  処理が遅い: "具体的にどのような処理が遅いと感じていますか？また、処理時間の目標値はありますか？"
+  夜間バッチが終わらない: "具体的にどのような処理が遅いと感じていますか？また、処理時間の目標値はありますか？"
+
+# 課題特有の貢献ポイント
+ISSUE_SPECIFIC_CONTRIBUTIONS:
+  コストが高い: "- **コスト最適化**: Databricksのフォトンエンジンと自動スケーリングにより、同等のワークロードを最大5倍のコスト効率で実行可能"
+  パフォーマンスが低い: "- **高速化**: Photonエンジンによる高速なデータ処理で、既存の処理時間を最大10倍に短縮"
+  処理が遅い: "- **高速化**: Photonエンジンによる高速なデータ処理で、既存の処理時間を最大10倍に短縮"
+  夜間バッチが終わらない: "- **バッチ処理の高速化**: 並列処理とクラスタリソースの最適化により、長時間実行バッチを大幅に短縮"
